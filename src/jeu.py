@@ -42,3 +42,8 @@ def proposer_mot(mot):
         life -= 1
         return False
 
+def count_lettres_error():
+    return len(lettreProposees)
+
+def get_lettreProposees():
+    return lettreProposees
