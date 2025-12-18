@@ -15,8 +15,9 @@ def proposer_lettre(lettre):
     global life
     global lettreProposees
     lettreProposees.append(lettre)
-
-    if lettre in mot_secret:
+    if lettre in lettreProposees[:]:
+        return None
+    elif lettre in mot_secret:
         return True
     else:
         life -= 1
