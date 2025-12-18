@@ -1,8 +1,16 @@
-
-
-mot_secret = input ("Choisis ton mot ptit pd")
+mot_secret = ""
 life=10
 lettreProposees = []
+
+def reset_game():
+    global mot_secret
+    global life
+    global lettreProposees
+
+    mot_secret = ""
+    life=10
+    lettreProposees = []
+
 
 def set_mot(mot):
     global mot_secret
@@ -14,13 +22,13 @@ def get_mot():
 def proposer_lettre(lettre):
     global life
     global lettreProposees
-    lettreProposees.append(lettre)
     if lettre in lettreProposees[:]:
         return None
     elif lettre in mot_secret:
         return True
     else:
         life -= 1
+        lettreProposees.append(lettre)
         return False
 
 def get_life():

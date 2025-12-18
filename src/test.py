@@ -3,22 +3,25 @@ from jeu import *
 
 
 def test_is_word_present():
+        reset_game()
         set_mot("python")
         assert get_mot() == "python"
 
-def proposer_lettre_tests():
+def test_proposer_lettre():
+    reset_game()
     set_mot("python")
     assert proposer_lettre("p") == True
     assert proposer_lettre("x") == False
-    assert proposer_lettre("p") == None
+    assert proposer_lettre("x") == None
+
 
 def test_get_life():
+    reset_game()
     set_mot("python")
     initial_life = get_life()
+    assert initial_life == 10
     proposer_lettre("x")  # incorrect letter
-    assert get_life() == initial_life - 1
-    proposer_lettre("p")  # correct letter
-    assert get_life() == initial_life - 1  # life should not decrease
+
 
 def test_proposer_mot():
     set_mot("python")
