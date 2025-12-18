@@ -10,5 +10,14 @@ def set_mot(mot):
 def get_mot():
     return mot_secret
 
+def proposer_lettre(lettre):
+    global life
+    if lettre in mot_secret:
+        return True
+    else:
+        life -= 1
+        return False
 
-print(_mot_secret)
+def get_life():
+    return life
+
