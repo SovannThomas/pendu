@@ -1,5 +1,6 @@
 import pytest
-from jeu import set_mot,get_mot
+from src.jeu import set_mot,get_mot
+
 
 class TestPendu():
 

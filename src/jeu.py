@@ -1,4 +1,5 @@
 
+
 _mot_secret = None
 _life=10
 
