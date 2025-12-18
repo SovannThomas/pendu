@@ -47,3 +47,4 @@ def count_lettres_error():
 
 def get_lettreProposees():
     return lettreProposees
+
