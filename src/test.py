@@ -47,14 +47,14 @@ def test_get_lettreProposees():
     assert get_lettreProposees() == ['x','u']
 
 def test_definir_life():
-     reset_game()
-     assert get_life() == 10
-     set_life(5)
-     assert get_life() == 5
-     set_mot("python")
-     proposer_lettre('z')
-     assert get_life() == 4
-     proposer_lettre('p')
-     assert get_life() == 4
-     reset_game()
-     assert get_life() == 10
+    reset_game()
+    assert get_life() == 10
+    set_life(5)
+    assert get_life() == 5
+    set_mot("python")
+    proposer_lettre('z')
+    assert get_life() == 4
+    proposer_lettre('p')
+    assert get_life() == 4
+    reset_game()
+    assert get_life() == 10

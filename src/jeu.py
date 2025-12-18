@@ -48,3 +48,6 @@ def count_lettres_error():
 def get_lettreProposees():
     return lettreProposees
 
+def set_life(new_life):
+    global life
+    life = new_life
