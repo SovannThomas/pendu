@@ -1,7 +1,8 @@
 
 
-_mot_secret = input ("Choisis ton mot ptit pd")
-_life=10
+mot_secret = input ("Choisis ton mot ptit pd")
+life=10
+lettreProposees = []
 
 def set_mot(mot):
     global mot_secret
@@ -12,6 +13,9 @@ def get_mot():
 
 def proposer_lettre(lettre):
     global life
+    global lettreProposees
+    lettreProposees.append(lettre)
+
     if lettre in mot_secret:
         return True
     else:
@@ -20,4 +24,12 @@ def proposer_lettre(lettre):
 
 def get_life():
     return life
+
+def proposer_mot(mot):
+    global life
+    if mot == mot_secret:
+        return True
+    else:
+        life -= 1
+        return False
 
